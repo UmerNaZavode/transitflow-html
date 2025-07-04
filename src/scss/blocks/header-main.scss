@@ -1,0 +1,9 @@
+.header-main {
+  background: rgba(9, 18, 66, 0.25);
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,25 @@
+.header-nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135%;
+
+    .is-active {
+      padding-bottom: 2.4rem;
+      border-bottom: solid 2px #fff;
+    }
+  }
+
+  &__item:not(:first-child) {
+    padding-left: 3rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}

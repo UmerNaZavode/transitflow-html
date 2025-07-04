@@ -5,6 +5,7 @@
   &__body {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__list {
@@ -17,17 +18,18 @@
   }
 
   &__item {
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.7rem;
   }
 
   &__icon {
-    width: 64px;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
+    width: 64px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
     background: #111c55;
     border: solid 1px #273270;
     border-radius: 100%;
