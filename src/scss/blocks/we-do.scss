@@ -1,0 +1,29 @@
+.we-do {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9.6rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+    column-gap: 7rem;
+    row-gap: 7rem;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 2.5rem;
+    gap: 1.3rem;
+  }
+
+  &__icon {
+    padding-right: 2.5rem;
+    border-right: 1px solid #d8d8d8;
+  }
+}
