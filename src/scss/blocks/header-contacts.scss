@@ -1,0 +1,35 @@
+.header-contacts {
+  background: var(--color-base-blue);
+  padding-block: 4.6rem;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3.9rem;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    color: #fff;
+  }
+
+  &__item {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 1.7rem;
+  }
+
+  &__icon {
+    width: 64px;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    background: #111c55;
+    border: solid 1px #273270;
+    border-radius: 100%;
+  }
+}
