@@ -1,4 +1,6 @@
 .header-main {
+  position: relative;
+  z-index: 10;
   background: rgba(9, 18, 66, 0.25);
 
   &__body {

@@ -1,0 +1,17 @@
+.home-intro {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__body {
+    padding-top: 25.1rem;
+  }
+}
