@@ -1,11 +1,12 @@
 body {
-  font-family: 'Helvetica Neue Cyr', sans-serif;
+  font-family: var(--font-family-base);
 }
 
 .title {
   font-family: var(--font-family-second);
   font-weight: 600;
   font-size: 3.5rem;
+  color: var(--color-base-blue);
 }
 
 .subtitle {

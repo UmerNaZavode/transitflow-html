@@ -5,6 +5,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
+    overflow: hidden;
   }
 
   &__wrapper {
@@ -12,15 +13,44 @@
   }
 
   &__body {
+    // display: flex;
+    // flex-direction: column;
     padding-top: 25.1rem;
+
+    @media screen and (max-width: 1555px) {
+      padding-top: 20rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding-top: 18rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 15rem;
+    }
   }
 
   &__title {
-    margin-top: 8px;
+    margin-top: 0.8rem;
+    font-weight: 700;
+    font-size: 6rem;
+    color: #fff;
+
+    @media screen and (max-width: 1555px) {
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 4.5rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 3.5rem;
+    }
   }
 
   &__info {
-    margin-top: 6px;
+    margin-top: 0.6rem;
   }
 
   &__button {

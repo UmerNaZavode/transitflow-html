@@ -1,10 +1,16 @@
 .tag {
+  display: inline-flex;
   font-family: var(--font-family-second);
   font-weight: 400;
-  font-size: 14px;
-  padding: 3px 9px;
-  max-width: 24.7rem;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.9rem;
   color: #fff;
   background: rgba(4, 28, 55, 0.5);
   border-left: solid 2px yellow;
+
+
+  &--alt {
+    color: var(--color-base-blue);
+    background: rgba(232, 232, 232, 0.5);
+  }
 }
