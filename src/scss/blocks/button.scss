@@ -1,15 +1,64 @@
 .button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
+  padding: 1.9rem 4.8rem;
+  width: 19.8rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 135%;
+  z-index: 2;
 
   &__yellow {
-    padding: 1.9rem 4.8rem;
-    width: 19.8rem;
-    border: none;
-    font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 135%;
+    color: black;
     background: var(--gradient-yellow);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      right: -2rem;
+      width: 5.2rem;
+      height: 5.2rem;
+      background: white;
+      border-radius: 50%;
+      transition: 0.6s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      width: 12rem;
+      height: 20.6rem;
+      bottom: -10rem;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+
+  &__blue {
+    color: white;
+    background: var(--color-base-blue);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      right: -2rem;
+      width: 5.2rem;
+      height: 5.2rem;
+      background: #1f2a69;
+      border-radius: 50%;
+      transition: 0.6s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      width: 12rem;
+      height: 20.6rem;
+      bottom: -10rem;
+      border-radius: 50%;
+      background: #1f2a69;
+    }
   }
 }
-
-// TODO: button look and hover effect
