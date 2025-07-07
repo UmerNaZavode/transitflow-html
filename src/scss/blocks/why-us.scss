@@ -1,0 +1,59 @@
+.why-us {
+  position: relative;
+  z-index: -10;
+
+  &__title {
+    margin-top: 1.2rem;
+  }
+
+  &__paragraph {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    gap: 2.5rem;
+  }
+
+  &__body {
+    position: absolute;
+    top: 36.6rem;
+    display: flex;
+    gap: 8.8rem;
+    padding: 8.5rem 9.3rem 1.8rem 8.6rem;
+    background: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 2.2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    color: var(--color-heading);
+  }
+
+  &__right {
+    position: relative;
+  }
+
+  &__1 {
+    position: relative;
+  }
+
+  &__2 {
+    position: absolute;
+    left: -10rem;
+    bottom: -1.7rem;
+    padding: 3rem 3rem 0 0;
+    z-index: 1;
+    background: #fff;
+  }
+}
