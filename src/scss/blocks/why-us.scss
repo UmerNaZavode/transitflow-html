@@ -1,6 +1,30 @@
 .why-us {
   position: relative;
-  z-index: -10;
+
+  &__img {
+    position: relative;
+    z-index: -10;
+  }
+
+  &__body {
+    position: relative;
+    // top: 36.6rem;
+    display: flex;
+    gap: 8.8rem;
+    // padding: 8.5rem 9.3rem 1.8rem 8.6rem;
+    // background: #fff;
+    // z-index: 10;
+  }
+
+  &__container {
+    position: absolute;
+    top: 36.6rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: #fff;
+    padding: 8.5rem 9.3rem 1.8rem 8.6rem;
+  }
 
   &__title {
     margin-top: 1.2rem;
@@ -11,15 +35,6 @@
     flex-direction: column;
     margin-top: 1.2rem;
     gap: 2.5rem;
-  }
-
-  &__body {
-    position: absolute;
-    top: 36.6rem;
-    display: flex;
-    gap: 8.8rem;
-    padding: 8.5rem 9.3rem 1.8rem 8.6rem;
-    background: #fff;
   }
 
   &__list {
@@ -44,10 +59,6 @@
     position: relative;
   }
 
-  &__1 {
-    position: relative;
-  }
-
   &__2 {
     position: absolute;
     left: -10rem;
@@ -55,5 +66,47 @@
     padding: 3rem 3rem 0 0;
     z-index: 1;
     background: #fff;
+  }
+
+  &__stat-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin-top: 13.8rem;
+  }
+
+  &__stat-item {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__stat-number {
+    font-family: var(--font-family-second);
+    font-weight: 600;
+    font-size: 6rem;
+    color: var(--color-heading);
+  }
+
+  &__stat-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-third);
+    font-weight: 400;
+    padding-left: 3.2rem;
+    font-size: 2rem;
+    color: var(--color-heading);
+  }
+
+  &__stat-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: var(--gradient-yellow);
   }
 }
