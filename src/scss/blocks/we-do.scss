@@ -3,6 +3,10 @@
   justify-content: space-between;
   margin-block: 9.6rem 12.1rem;
 
+  &__title {
+    margin-top: 1.5rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -13,6 +17,7 @@
 
   &__item {
     display: flex;
+    justify-content: space-between;
   }
 
   &__info {
@@ -27,5 +32,3 @@
     border-right: 1px solid #d8d8d8;
   }
 }
-
-// TODO: find out how to fix icons
