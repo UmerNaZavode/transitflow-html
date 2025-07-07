@@ -5,21 +5,18 @@
   &__img {
     position: relative;
     z-index: -10;
+
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image: linear-gradient(360deg, #091242 0%, rgba(9, 18, 66, 0) 100%);
+    }
   }
 
-  .immg {
-    position: relative;
-  }
-
-  .immg::before {
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background-image: linear-gradient(360deg, #091242 0%, rgba(9, 18, 66, 0) 100%);
-  }
 
   &__inner {
     position: absolute;
