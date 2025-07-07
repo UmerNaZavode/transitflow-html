@@ -1,1 +1,18 @@
-.reviews {}
+.reviews {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+  }
+
+  &__title {
+    margin-top: 1.3rem;
+  }
+
+  &__right {
+    display: flex;
+    gap: 0.95rem;
+  }
+}

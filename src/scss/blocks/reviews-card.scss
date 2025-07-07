@@ -1,0 +1,54 @@
+.reviews-card {
+  margin-top: 4rem;
+  display: flex;
+
+  &__wrapper {
+    padding: 6.2rem 7.2rem;
+    color: var(--color-base-blue);
+    background: #f4f4f4;
+  }
+
+  &__wrapper--alt {
+    color: #fff;
+    background: var(--color-base-blue);
+
+    .reviews-card__desk {
+      color: #fff;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__author {
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__name {
+    font-family: var(--font-family-second);
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__company {
+    font-weight: var(--font-family-second);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 152%;
+  }
+}
