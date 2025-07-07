@@ -1,29 +1,40 @@
 .why-us {
   position: relative;
+  height: 118rem;
 
   &__img {
     position: relative;
     z-index: -10;
   }
 
-  &__body {
+  .immg {
     position: relative;
-    // top: 36.6rem;
-    display: flex;
-    gap: 8.8rem;
-    // padding: 8.5rem 9.3rem 1.8rem 8.6rem;
-    // background: #fff;
-    // z-index: 10;
   }
 
-  &__container {
+  .immg::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: linear-gradient(360deg, #091242 0%, rgba(9, 18, 66, 0) 100%);
+  }
+
+  &__inner {
     position: absolute;
     top: 36.6rem;
     display: flex;
     flex-direction: column;
     z-index: 10;
     background: #fff;
-    padding: 8.5rem 9.3rem 1.8rem 8.6rem;
+    padding: 8.5rem 9.3rem 0 8.6rem;
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    gap: 8.8rem;
   }
 
   &__title {
@@ -71,16 +82,25 @@
   &__stat-list {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    color: black;
+    justify-content: center;
+    gap: 11.2rem;
     margin-top: 13.8rem;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
   }
+
 
   &__stat-item {
     display: flex;
+    padding-block: 4.6rem 3.8rem;
     gap: 1.6rem;
     justify-content: center;
     align-items: center;
+  }
+
+  &__stat-item:not(:first-child) {
+    padding-left: 11.2rem;
+    border-left: 1px solid #d4d4d4;
   }
 
   &__stat-number {
