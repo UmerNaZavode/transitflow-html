@@ -51,4 +51,23 @@
     font-size: 16px;
     line-height: 152%;
   }
+
+  &__quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.3rem;
+    height: 7.3rem;
+    border-radius: 50%;
+    background: var(--gradient-yellow);
+  }
+
+  &__desk {
+    font-style: italic;
+    margin-top: 2.4rem;
+  }
+
+  &__rating {
+    margin-top: 3.2rem;
+  }
 }

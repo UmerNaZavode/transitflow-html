@@ -1,0 +1,14 @@
+.reviews-rating {
+  display: inline-flex;
+  gap: 0.3rem;
+
+  &__star {
+  width: 3.4rem;
+  height: 3.4rem;
+  background: url(/src/icons/rating-star-innactive.svg) center/contain no-repeat;
+
+    &.is-active {
+      background: url(/src/icons/rating-star.svg) center/contain no-repeat;
+    }
+  }
+}

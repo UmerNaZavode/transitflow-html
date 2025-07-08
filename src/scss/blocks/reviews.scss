@@ -1,10 +1,10 @@
 .reviews {
+  margin-block: 10rem;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10rem;
   }
 
   &__title {
