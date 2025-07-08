@@ -1,0 +1,13 @@
+.team {
+
+  &__card {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    background: var(--color-base-blue);
+  }
+}
