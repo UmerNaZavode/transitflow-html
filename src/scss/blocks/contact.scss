@@ -1,0 +1,34 @@
+.contact {
+  padding-block: 14.3rem;
+  background: #091242;
+
+  &__info {
+    color: #fff;
+  }
+
+  &__title {
+    margin-top: 1.3rem;
+    color: inherit;
+  }
+
+  &__desk {
+    margin-top: 0.3rem;
+    color: inherit;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3.2rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+  }
+}
