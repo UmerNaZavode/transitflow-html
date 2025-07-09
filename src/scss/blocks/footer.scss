@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  background: var(--color-base-blue);
+  z-index: -100;
+
+  &::before {
+    content: '';
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 11.8rem;
+    top: 0;
+    left: 0;
+    background: #1d2551;
+    z-index: -10;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-inline: 35.7rem 35.8rem;
+  }
+}
