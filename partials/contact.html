@@ -43,7 +43,31 @@
           </li>
         </ul>
       </div>
-      <div class="contact__form"></div>
+      <div class="contact__wrapper">
+        <form class="contact__form">
+          <div class="contact__cell field">
+            <label for="firstName" class="contact__label"></label>
+            <input id="firstName" class="contact__control" placeholder="Your name*" required>
+          </div>
+          <div class="contact__cell field">
+            <label for="email" class="contact__label"></label>
+            <input id="email" class="contact__control" placeholder="Email*" required>
+          </div>
+          <div class="contact__cell field">
+            <label for="phoneNumber" class="contact__label"></label>
+            <input id="phoneNumber" class="contact__control" placeholder="Phone Number*" required>
+          </div>
+          <div class="contact__cell field">
+            <label for="city" class="contact__label"></label>
+            <input id="city" class="contact__control" placeholder="City*" required>
+          </div>
+          <div class="contact__cell contact__cell--wide field">
+            <label for="message" class="contact__label"></label>
+            <textarea id="message" class="contact__control" placeholder="Your Message"></textarea>
+          </div>
+        </form>
+        <button class="contact__button button button--yellow" type="button">Submit Message</button>
+      </div>
     </div>
   </div>
 </section>

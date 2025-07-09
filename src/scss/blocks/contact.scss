@@ -2,12 +2,20 @@
   padding-block: 14.3rem;
   background: #091242;
 
+  &__body {
+    display: flex;
+    gap: 8.8rem;
+    margin-top: 1.3rem;
+  }
+
   &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 35.3rem;
     color: #fff;
   }
 
   &__title {
-    margin-top: 1.3rem;
     color: inherit;
   }
 
@@ -30,5 +38,42 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 135%;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__form {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.8rem;
+    row-gap: 3.1rem;
+  }
+
+  &__cell {
+    width: 100%;
+
+    &--wide {
+      grid-column: -1 / 1;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    padding: 2.1rem 0 2.1rem 3rem;
+    border: 1px solid #4e5683;
+    background: none;
+    color: #fff;
+  }
+
+  textarea.contact__control {
+    resize: vertical;
+    height: 15.4rem;
+  }
+
+  &__button {
+    margin-top: 3rem;
   }
 }
