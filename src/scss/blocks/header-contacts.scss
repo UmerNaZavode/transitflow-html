@@ -1,6 +1,6 @@
 .header-contacts {
   background: var(--color-base-blue);
-  padding-block: 4.6rem;
+  padding-block: 4.8rem;
 
   &__body {
     display: flex;
@@ -10,7 +10,7 @@
 
   &__list {
     display: flex;
-    gap: 3.9rem;
+    gap: 3.1rem;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 135%;
@@ -22,16 +22,9 @@
     align-items: center;
     justify-content: center;
     gap: 1.7rem;
-  }
 
-  // &__icon {
-  //   display: flex;
-  //   width: 6.4rem;
-  //   height: 6.4rem;
-  //   align-items: center;
-  //   justify-content: center;
-  //   background: #111c55;
-  //   border: solid 1px #273270;
-  //   border-radius: 100%;
-  // }
+    &:nth-of-type(1) {
+      padding-right: 3.3rem;
+    }
+  }
 }

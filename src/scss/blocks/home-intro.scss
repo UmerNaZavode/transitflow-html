@@ -23,9 +23,11 @@
   }
 
   &__title {
-    margin-top: 0.8rem;
+    font-family: var(--font-family-second);
     font-weight: 700;
+    line-height: 120%;
     font-size: 6rem;
+    margin-top: 0.8rem;
     color: #fff;
   }
 
@@ -35,6 +37,6 @@
   }
 
   &__button {
-    margin-top: 2.4rem;
+    margin-top: 2.2rem;
   }
 }
