@@ -1,28 +1,31 @@
 .choose-us {
-  position: relative;
-  height: 89.7rem;
-  padding-block: 14.2rem 14.5rem;
-  background: #f4f4f4;
-  z-index: -100;
 
-  &::before {
-    content: '';
-    position: absolute;
-    object-fit: cover;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    background: var(--color-base-blue);
+  &__inner {
+    position: relative;
+    display: flex;
+    gap: 5.3rem;
+    height: 89.7rem;
+    padding-block: 14.2rem 14.5rem;
+    background: #f4f4f4;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      object-fit: cover;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      background: var(--color-base-blue);
+    }
   }
 
   &__left {
-    position: absolute;
-    object-fit: cover;
-    top: 14.2rem;
-    left: 14rem;
-    z-index: 1;
+    position: relative;
+    margin-left: 14rem;
+    z-index: 10;
   }
 
   &__wrapper {
@@ -53,12 +56,6 @@
     color: var(--color-base-blue);
   }
 
-  &__right {
-    position: absolute;
-    object-fit: cover;
-    top: 20rem;
-    right: 20rem;
-  }
 
   &__title {
     margin-top: 1.2rem;
