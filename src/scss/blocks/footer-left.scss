@@ -1,9 +1,32 @@
 .footer-left {
-  padding: 4.3rem 6.3rem 4.3rem 4.5rem;
+  padding: 4.3rem 6.3rem 0 4.5rem;
   background: var(--color-base-blue);
-  max-width: 37%;
+  max-width: 32%;
 
   &__info {
     margin-top: 7.7rem;
+  }
+
+  &__desk {
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3.3rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  &__info {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 135%;
   }
 }

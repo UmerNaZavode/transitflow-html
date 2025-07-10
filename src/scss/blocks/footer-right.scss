@@ -1,4 +1,55 @@
 .footer-right {
   display: flex;
+  gap: 14rem;
   padding-top: 4.5rem;
+  margin-left: 5.4rem;
+
+  &__title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  &__content {
+    margin-top: 7.4rem;
+  }
+
+  &__list {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 250%;
+    color: #fff;
+  }
+
+  &__down {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  &__button {
+    font-weight: 600;
+    padding: 1.9rem 3.6rem;
+    font-size: 1.6rem;
+    line-height: 135%;
+    color: #23212a;
+    background: linear-gradient(127deg, #ffb629 0%, #ffda56 50.72%, #ffd7a6 100%);
+  }
+
+  &__control {
+    font-family: var(--font-family-third);
+    width: 100%;
+    padding: 2.1rem 0 2.1rem 3rem;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #fff;
+    border: 1px solid #4e5683;
+    background: none;
+  }
+
+  &__socials-list {
+    display: flex;
+    gap: 2.7rem;
+  }
 }
