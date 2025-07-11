@@ -23,6 +23,20 @@
     &:last-child {
       border-bottom: 1px solid #d6d6d6;
     }
+
+    @media screen and (max-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 
+        'calendar info'
+        'img';
+    }
+  }
+
+  // TODO: разобраться с gta
+
+  &__img {
+    grid-area: img;
   }
 
   &__calendar {
@@ -30,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
+    grid-area: calendar;
   }
 
   &__date {
@@ -57,6 +72,7 @@
     padding-top: 1.1rem;
     padding-left: 2.3rem;
     border-left: 1px solid #d6d6d6;
+    grid-area: info;
   }
 
   &__subtitle {
