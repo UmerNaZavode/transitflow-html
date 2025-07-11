@@ -1,7 +1,17 @@
 .we-do {
   display: flex;
-  justify-content: space-between;
   margin-block: 9.6rem 13rem;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    margin-block: 7rem 11rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-block: 5rem 8rem;
+  }
 
   &__title {
     margin-top: 1.5rem;
@@ -13,6 +23,10 @@
     justify-content: start;
     column-gap: 7rem;
     row-gap: 7rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {

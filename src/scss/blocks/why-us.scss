@@ -2,6 +2,14 @@
   position: relative;
   height: 118rem;
 
+  @media screen and (max-width: 1200px) {
+    position: static;
+  }
+
+  @media screen and (max-width: 992px) {
+    height: auto;
+  }
+
   &__img {
     position: relative;
     z-index: -10;
@@ -17,39 +25,80 @@
     }
   }
 
+  &__container {
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
   &__inner {
     position: absolute;
+    max-width: 120rem;
     top: 36.6rem;
     display: flex;
     flex-direction: column;
     z-index: 10;
     background: #fff;
     padding: 8.5rem 9.3rem 0 8.6rem;
+
+    @media screen and (max-width: 1200px) {
+      position: static;
+      padding-top: 5rem;
+      padding-inline: 0;
+    }
+  }
+
+  &__left {
+    max-width: 44%;
+
+    @media screen and (max-width: 768px) {
+      max-width: 70%;
+    }
   }
 
   &__body {
     position: relative;
     display: flex;
+    justify-content: space-between;
     gap: 8.8rem;
+
+    @media screen and (max-width: 1200px) {
+      gap: 4rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 576px) {
+      align-items: start;
+    }
   }
 
   &__title {
     margin-top: 1.2rem;
+
+    @media screen and (max-width: 576px) {
+      font-size: 3rem;
+    }
   }
 
   &__paragraph {
     display: flex;
     flex-direction: column;
-    margin-top: 1.2rem;
     gap: 2.5rem;
+    margin-top: 1.2rem;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    margin-top: 2.5rem;
     gap: 2.2rem;
+    margin-top: 2.5rem;
   }
 
   &__item {
@@ -61,10 +110,21 @@
   &__subtitle {
     font-weight: 400;
     color: var(--color-heading);
+
+    @media screen and (max-width: 576px) {
+      font-size: 2rem;
+    }
   }
 
   &__right {
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 46.1rem;
+    }
   }
 
   &__2 {
@@ -74,6 +134,17 @@
     padding: 3rem 3rem 0 0;
     z-index: 1;
     background: #fff;
+
+    @media screen and (max-width: 992px) {
+      left: -2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      left: 0;
+      bottom: -5rem;
+      width: 30rem;
+      height: 21rem;
+    }
   }
 
   &__stat-list {
@@ -84,8 +155,17 @@
     margin-top: 13.4rem;
     border-top: 1px solid #d4d4d4;
     border-bottom: 1px solid #d4d4d4;
-  }
 
+    @media screen and (max-width: 768px) {
+      margin-top: 9rem;
+      gap: 5rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
 
   &__stat-item {
     position: relative;
@@ -94,11 +174,25 @@
     gap: 1.6rem;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      padding-block: 3.6rem 2.8rem;
+    }
   }
 
   &__stat-item:nth-of-type(1) {
     padding-right: 9.6rem;
     border-right: 1px solid #d4d4d4;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 5rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 1px solid #d4d4d4;
+    }
   }
 
   &__stat-number {
@@ -106,6 +200,10 @@
     font-weight: 600;
     font-size: 5rem;
     color: var(--color-heading);
+
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
   }
 
   &__stat-text {
