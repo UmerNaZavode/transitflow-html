@@ -4,14 +4,33 @@
   align-items: center;
   padding-block: 9.5rem 10rem;
 
+  @media screen and (max-width: 992px) {
+    padding-block: 8rem 9rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-block: 4rem 5rem;
+  }
+
   &__title {
     margin-top: 1.5rem;
   }
 
   &__members {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 5.4rem;
     margin-top: 4rem;
+
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-top: 2.5rem;
+      gap: 3rem;
+    }
   }
 
   &__card {
@@ -61,12 +80,12 @@
     }
   }
 
-  &__item {
-    @media screen and (max-width: 992px) {
-      svg {
-        width: 18px;
-        height: auto;
-      }
-    }
-  }
+  // &__item {
+  //   @media screen and (max-width: 992px) {
+  //     svg {
+  //       width: 18px;
+  //       height: auto;
+  //     }
+  //   }
+  // }
 }
