@@ -2,17 +2,37 @@
   padding-block: 14.3rem 14.9rem;
   background: #091242;
 
+  @media screen and (max-width: 768px) {
+    padding-block: 8rem 9rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-block: 4rem 5rem;
+  }
+
   &__body {
     display: flex;
     gap: 8.8rem;
     margin-top: 1.3rem;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    min-width: 35.3rem;
+    width: 46%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
     color: #fff;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -20,8 +40,12 @@
   }
 
   &__desk {
-    margin-top: 0.3rem;
+    margin-top: 1rem;
     color: inherit;
+
+    @media screen and (max-width: 992px) {
+      width: 70%;
+    }
   }
 
   &__list {
@@ -29,6 +53,20 @@
     flex-direction: column;
     gap: 3rem;
     margin-top: 3.2rem;
+
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      max-width: auto;
+      gap: 7rem;
+      // grid-template-columns: repeat(2, 1fr);
+      // align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
   }
 
   &__item {
@@ -71,12 +109,20 @@
       font-weight: 400;
       font-size: 2rem;
       color: #fff;
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.6rem;
+      }
     }
   }
 
   textarea.contact__control {
     resize: vertical;
     height: 15.4rem;
+    
+    @media screen and (max-width: 576px) {
+      height: 10rem;
+    }
   }
 
   &__button {
