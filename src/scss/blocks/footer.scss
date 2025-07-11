@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   background: var(--color-base-blue);
-  z-index: -100;
+  z-index: 1;
 
   &::before {
     content: '';
@@ -17,6 +17,6 @@
 
   &__wrapper {
     display: flex;
-    margin-inline: 35.7rem 35.8rem;
+    margin-inline: 31.4rem;
   }
 }

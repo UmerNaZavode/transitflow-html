@@ -3,6 +3,7 @@
   &__inner {
     position: relative;
     display: flex;
+    align-items: center;
     gap: 5.3rem;
     height: 89.7rem;
     padding-block: 14.2rem 14.5rem;
@@ -43,7 +44,7 @@
     justify-content: center;
     align-items: center;
     gap: 2.1rem;
-    padding: 3rem 3.9rem 2.9rem 3.3rem;
+    padding: 3rem 4.5rem 2.9rem 3.3rem;
     bottom: 0;
     left: 22rem;
     background: linear-gradient(127deg, #ffb629 0%, #ffda56 50.72%, #ffd7a6 100%);
@@ -52,7 +53,7 @@
 
   &__desk {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: var(--color-base-blue);
   }
 
@@ -65,7 +66,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 7.2rem;
+    column-gap: 3.8rem;
     row-gap: 2rem;
     margin-top: 6.1rem;
   }
@@ -78,7 +79,7 @@
 
   &__subtitle {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   &__icon {

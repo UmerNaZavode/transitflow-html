@@ -1,5 +1,5 @@
 .contact {
-  padding-block: 14.3rem;
+  padding-block: 14.3rem 14.9rem;
   background: #091242;
 
   &__body {
@@ -36,7 +36,7 @@
     gap: 1.4rem;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 135%;
   }
 
@@ -66,7 +66,12 @@
     padding: 2.1rem 0 2.1rem 3rem;
     border: 1px solid #4e5683;
     background: none;
-    color: #fff;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 2rem;
+      color: #fff;
+    }
   }
 
   textarea.contact__control {
@@ -75,6 +80,13 @@
   }
 
   &__button {
+    font-weight: 600;
+    font-size: 1.6rem;
     margin-top: 3rem;
+    padding: 1.9rem 3.4rem;
+    line-height: 135%;
+    color: #23212a;
+    border: none;
+    background: linear-gradient(127deg, #ffb629 0%, #ffda56 50.72%, #ffd7a6 100%);
   }
 }
