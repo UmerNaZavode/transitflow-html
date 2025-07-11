@@ -21,11 +21,11 @@
     background: var(--gradient-yellow);
   }
 
-  &__title {
-    @media screen and (max-width: 576px) {
-      font-size: 2.6rem;
-    }
-  }
+  // &__title {
+  //   @media screen and (max-width: 576px) {
+  //     font-size: 2.6rem;
+  //   }
+  // }
 
   &__list {
     display: flex;

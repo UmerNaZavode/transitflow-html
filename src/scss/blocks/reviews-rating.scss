@@ -7,6 +7,11 @@
   height: 3.4rem;
   background: url(/src/icons/rating-star-innactive.svg) center/contain no-repeat;
 
+    @media screen and (max-width: 576px) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
     &.is-active {
       background: url(/src/icons/rating-star.svg) center/contain no-repeat;
     }

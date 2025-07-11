@@ -2,10 +2,18 @@
   margin-top: 4rem;
   display: flex;
 
+  @media screen and (max-width: 992px) {
+    flex-wrap: wrap;
+  }
+
   &__wrapper {
     padding: 6.2rem 7.2rem;
     color: var(--color-base-blue);
     background: #f4f4f4;
+
+    @media screen and (max-width: 576px) {
+      padding: 3.5rem 4.5rem;
+    }
   }
 
   &__wrapper--alt {
@@ -31,6 +39,11 @@
 
   &__author {
     border-radius: 50%;
+    
+    @media screen and (max-width: 576px) {
+      width: 70px;
+      height: auto;
+    }
   }
 
   &__info {
@@ -60,6 +73,16 @@
     height: 7.3rem;
     border-radius: 50%;
     background: var(--gradient-yellow);
+
+    @media screen and (max-width: 576px) {
+      width: 5rem;
+      height: 5rem;
+      
+      svg {
+        width: 22px;
+        height: 12px;
+      }
+    }
   }
 
   &__desk {
@@ -69,5 +92,9 @@
 
   &__rating {
     margin-top: 3.2rem;
+
+    @media screen and (max-width: 576px) {
+      margin-top: 1.2rem;
+    }
   }
 }
