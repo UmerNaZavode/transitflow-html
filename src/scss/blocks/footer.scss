@@ -13,10 +13,23 @@
     left: 0;
     background: #1d2551;
     z-index: -10;
+
+    @media screen and (max-width: 1200px) {
+      position: static;
+    }
   }
 
   &__wrapper {
     display: flex;
-    margin-inline: 31.4rem;
+    gap: 5.3rem;
+    margin: 0 auto;
+    width: 1324px;
+    padding-inline: 1.5rem;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      width: auto;
+      gap: 0;
+    }
   }
 }
