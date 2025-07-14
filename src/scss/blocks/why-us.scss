@@ -10,7 +10,7 @@
     height: auto;
   }
 
-  &__img {
+  &__wrapper {
     position: relative;
     z-index: -10;
 
@@ -23,6 +23,11 @@
       z-index: 1;
       background-image: linear-gradient(360deg, #091242 0%, rgba(9, 18, 66, 0) 100%);
     }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
   }
 
   &__container {
