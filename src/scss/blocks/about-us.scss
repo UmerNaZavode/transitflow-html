@@ -1,0 +1,129 @@
+.about-us {
+  padding: 10.3rem 1.5rem 10rem;
+  display: flex;
+  gap: 14rem;
+
+  @media screen and (max-width: 1200px) {
+    gap: 10rem;
+    padding-block: 7rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-block: 4rem 6rem;
+    gap: 3rem;
+  }
+
+  &__left {
+    @media screen and (max-width: 1400px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 726px;
+    height: auto;
+    margin-left: 9rem;
+
+    @media screen and (max-width: 1400px) {
+      width: 500px;
+      margin-left: 6rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 450px;
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: 300px;
+    }
+  }
+
+  &__img-abs {
+    position: absolute;
+    object-fit: cover;
+    bottom: -4.5rem;
+    right: -4rem;
+    padding: 2.5rem 0 0 2.5rem;
+    background-color: #fff;
+
+    @media screen and (max-width: 1200px) {
+      width: 200px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 576px) {
+      right: 0;
+      width: 145px;
+      height: auto;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 610px;
+  }
+
+  &__inner {
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-top: 1.5rem;
+  }
+
+  &__desk {
+    margin-top: 1.2rem;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-top: 1.9rem;
+  }
+
+  &__tabs-desk {
+    margin-top: 2.7rem;
+  }
+
+  &__tabs-button {
+    padding: 1.5rem 3.9rem 1.6rem 3.8rem;
+    font-weight: 600;
+    font-size: 1.9rem;
+    line-height: 152%;
+    background: #f4f4f4;
+    border: none;
+
+    &.is-active {
+      background: #ffb82b;
+      color: #fff;
+    }
+  }
+
+  &__button {
+    margin-top: 3.5rem;
+
+    @media screen and (max-width: 576px) {
+      margin-top: 2rem;
+    }
+  }
+}
