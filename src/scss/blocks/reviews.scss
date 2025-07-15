@@ -1,5 +1,9 @@
 .reviews {
-  margin-block: 13.4rem 10rem;
+  padding-block: 13.4rem 10rem;
+
+  &--alt {
+    background: #f4f4f4;
+  }
 
   @media screen and (max-width: 992px) {
     margin-block: 9rem 8rem;
