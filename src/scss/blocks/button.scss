@@ -6,10 +6,11 @@
   align-items: center;
   padding: 1.9rem 4.8rem;
   // width: 19.8rem;
-  border: none;
+  font-family: var(--font-family-third);
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 135%;
+  border: none;
   z-index: 2;
 
   &--yellow {
