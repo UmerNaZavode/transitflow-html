@@ -1,0 +1,32 @@
+.sea-transport {
+  padding-top: 10rem;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 7rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 4rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    margin-top: 4rem;
+  }
+
+  &__icon {
+    svg {
+      width: 6.2rem;
+      height: auto;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.2rem;
+  }
+}
