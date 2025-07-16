@@ -1,3 +1,28 @@
-<section class="how-it-works">
-  a
+<section class="how-it-works container">
+  <div class="how-it-works__left">
+    <div class="video-player" data-js-video-player>
+      <video src="./../src/videos/example.mp4" class="videp-player__video" width="645" height="367"
+        poster="./../src/img/service-details/service-video.jpg" data-js-video-player-video></video>
+      <div class="video-player__panel is-active" data-js-video-player-panel>
+        <button class="video-player__play-button" type="button" title="Play video" data-js-video-player-play-button>
+          {{> icons/icon-play-button }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="how-it-works__right">
+    <h2 class="how-it-works__title title">How It Works</h2>
+    <div class="how-it-works__text">
+      <p class="how-it-works__desk">
+        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+        Nemo
+        enim ipsam voluptatem, quia voluptas sit, doloremque laudantium.
+      </p>
+      <p class="how-it-works__desk">
+        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam eaque ipsa, quae ab illo inventore veritatis.
+      </p>
+    </div>
+  </div>
 </section>
