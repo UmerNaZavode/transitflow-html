@@ -114,6 +114,11 @@
     line-height: 152%;
     background: #f4f4f4;
     border: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #ffb82b;
+    }
 
     &.is-active {
       background: #ffb82b;
