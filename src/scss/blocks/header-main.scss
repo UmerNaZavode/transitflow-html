@@ -1,5 +1,6 @@
 .header-main {
   position: relative;
+  margin-bottom: -8rem;
   z-index: 10;
   background: rgba(9, 18, 66, 0.25);
 
@@ -7,5 +8,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (max-width: 992px) {
+    display: none;
   }
 }

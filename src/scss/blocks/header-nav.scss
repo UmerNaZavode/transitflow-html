@@ -1,6 +1,7 @@
 .header-nav {
 
   &__list {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,6 +9,7 @@
   }
 
   &__item {
+    position: relative;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 135%;
@@ -16,12 +18,27 @@
       padding-left: 3rem;
       border-left: 1px solid rgba(255, 255, 255, 0.2);
     }
+
+    &--dropdown:hover .header-nav__dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    &--dropdown:hover .header-nav__button::after {
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform 0.3s ease;
+    }
   }
 
   &__link {
     position: relative;
     // padding-bottom: 3rem;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 135%;
     color: inherit;
 
     &::after {
@@ -42,6 +59,67 @@
 
     &:hover::after {
       transform: translateY(3rem) scaleX(1);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(9, 18, 66, 0.25);
+    backdrop-filter: blur(8px);
+    padding: 1rem 0;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    li a {
+      display: block;
+      padding: 0.8rem 1.6rem;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.6rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 135%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-right: 2.5rem;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.3s ease;
+      right: 0;
+      background-image: url("/src/icons/icon-small-arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &--dropdown:hover &__button::after {
+      transform: translateY(-50%) rotate(180deg);
+      transition: transform 0.3s ease;
     }
   }
 }
