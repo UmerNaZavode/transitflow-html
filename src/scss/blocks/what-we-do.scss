@@ -1,6 +1,10 @@
 .what-we-do {
   padding-block: 10.8rem;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
+
+  &--alt {
+    background: none;
+  }
 
   @media screen and (max-width: 768px) {
     padding-block: 7rem;

@@ -1,0 +1,53 @@
+.our-godness {
+  padding-block: 10.3rem;
+  background: #f4f4f4;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    margin-top: 3.5rem;
+    padding-left: 209px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__img-abs {
+    position: absolute;
+    object-fit: cover;
+    bottom: -2.9rem;
+    right: -3rem;
+    padding: 3rem 0 0 3rem;
+    background-color: #f4f4f4;
+
+
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 19px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 11px;
+    max-width: 468px;
+  }
+}
