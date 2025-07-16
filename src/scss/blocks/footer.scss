@@ -23,7 +23,7 @@
     display: flex;
     gap: 5.3rem;
     margin: 0 auto;
-    width: 1324px;
+    max-width: 1324px;
     padding-inline: 1.5rem;
 
     @media screen and (max-width: 1200px) {
