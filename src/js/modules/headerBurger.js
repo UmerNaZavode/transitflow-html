@@ -1,61 +1,60 @@
 export default function headerBurger() {
   const burger = document.querySelector('.header-burger');
   const mobileMenu = document.querySelector('.header-mobile');
-  const mobileOverlay = document.querySelector('.header-mobile__overlay');
-  const mobileDropdowns = document.querySelectorAll('.header-mobile__item--dropdown');
-  const body = document.body;
+  const overlay = document.querySelector('.header-mobile__overlay');
+  const closeBtn = document.querySelector('.header-mobile__close');
+  const dropdownButtons = document.querySelectorAll('.header-mobile__button--dropdown');
 
-  // Открытие/закрытие мобильного меню
-  function toggleMobileMenu() {
-    burger.classList.toggle('is-active');
-    mobileMenu.classList.toggle('is-active');
-    body.style.overflow = mobileMenu.classList.contains('is-active') ? 'hidden' : '';
+  // Проверяем наличие необходимых элементов
+  if (!burger || !mobileMenu) {
+    console.warn('Burger menu elements not found');
+    return;
   }
 
-  // Закрытие мобильного меню
-  function closeMobileMenu() {
-    burger.classList.remove('is-active');
-    mobileMenu.classList.remove('is-active');
-    body.style.overflow = '';
+  // Открытие меню
+  burger.addEventListener('click', function() {
+    burger.classList.add('is-active');
+    mobileMenu.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+  });
 
-    // Закрываем все dropdown'ы
-    mobileDropdowns.forEach(dropdown => {
-      dropdown.classList.remove('is-active');
+  // Закрытие меню по клику на overlay
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      closeMobileMenu();
     });
   }
 
-  // Обработчики событий
-  if (burger) {
-    burger.addEventListener('click', toggleMobileMenu);
+  // Закрытие меню по клику на кнопку закрытия
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      closeMobileMenu();
+    });
   }
 
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', closeMobileMenu);
+  // Функция закрытия меню
+  function closeMobileMenu() {
+    burger.classList.remove('is-active');
+    mobileMenu.classList.remove('is-active');
+    document.body.style.overflow = '';
   }
 
-  // Обработка dropdown'ов в мобильном меню
-  mobileDropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector('.header-mobile__button');
-
-    if (button) {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        dropdown.classList.toggle('is-active');
-
-        // Закрываем другие открытые dropdown'ы
-        mobileDropdowns.forEach(otherDropdown => {
-          if (otherDropdown !== dropdown) {
-            otherDropdown.classList.remove('is-active');
-          }
-        });
-      });
-    }
+  // Обработка выпадающих меню
+  dropdownButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const parentItem = this.closest('.header-mobile__item--dropdown');
+      if (parentItem) {
+        parentItem.classList.toggle('is-active');
+      }
+    });
   });
 
-  // Закрытие меню при клике на ссылку
+  // Закрытие меню при клике на ссылки
   const mobileLinks = document.querySelectorAll('.header-mobile__link');
   mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
+    link.addEventListener('click', function() {
+      closeMobileMenu();
+    });
   });
 
   // Закрытие меню при изменении размера экрана
@@ -65,17 +64,22 @@ export default function headerBurger() {
     }
   });
 
-  // Предотвращение закрытия при клике на контент меню
-  const mobileContent = document.querySelector('.header-mobile__content');
-  if (mobileContent) {
-    mobileContent.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-  }
-
-  // Возвращаем объект с методами для внешнего управления (опционально)
+  // Возвращаем объект с методами для внешнего управления
   return {
-    closeMobileMenu,
-    toggleMobileMenu
+    open: () => {
+      burger.classList.add('is-active');
+      mobileMenu.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    },
+    close: closeMobileMenu,
+    toggle: () => {
+      if (mobileMenu.classList.contains('is-active')) {
+        closeMobileMenu();
+      } else {
+        burger.classList.add('is-active');
+        mobileMenu.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
   };
 }

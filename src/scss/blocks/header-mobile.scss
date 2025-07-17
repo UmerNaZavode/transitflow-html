@@ -27,31 +27,79 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    // backdrop-filter: blur(8px);
     cursor: pointer;
   }
 
   &__content {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 90vw;
+    max-height: 80vh;
+    // background: rgba(9, 18, 66);
     background: var(--color-base-blue);
+    // backdrop-filter: blur(16px);
     padding: 2rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
+    opacity: 0;
+    scale: 0.9;
+    transition: all 0.3s ease;
 
     .header-mobile.is-active & {
-      transform: translateX(0);
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: none;
+    // backdrop-filter: blur(8px);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__close-line {
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(-45deg);
     }
   }
 
   &__nav {
     flex: 1;
+    margin-top: 3rem;
   }
 
   &__list {
@@ -81,7 +129,7 @@
         }
 
         .header-mobile__button::after {
-          transform: rotate(180deg);
+          transform: rotate(-90deg);
         }
       }
     }
@@ -177,14 +225,12 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: none;
       transition: background-color 0.3s ease;
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.2);
       }
-
-      /* SVG иконки будут добавлены внутрь ссылок */
     }
   }
 

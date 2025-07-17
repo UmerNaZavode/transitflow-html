@@ -33,8 +33,12 @@
 
   &__title {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 6rem;
     margin-top: 0.8rem;
     color: #fff;
+
+    @media screen and (max-width: 576px) {
+      font-size: 4rem;
+    }
   }
 }

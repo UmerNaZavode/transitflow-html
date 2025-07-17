@@ -23,6 +23,10 @@
       z-index: 1;
       background-image: linear-gradient(360deg, #091242 0%, rgba(9, 18, 66, 0) 100%);
     }
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
   }
 
   &__img {
@@ -53,6 +57,10 @@
       position: static;
       padding-top: 5rem;
       padding-inline: 0;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-top: 0;
     }
   }
 
